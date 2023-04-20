@@ -18,12 +18,14 @@ int main(int argc, char const *argv[]) {
     testInput[size++] = '\0';
 
     MD5 *test = initMD5();
-    printf("Read message: %s\n", getMessage(test, testInput) == EXIT_SUCCESS ? "ok" : "failed");
+    printf("Read message: %s\n", attachMessageMD5(test, testInput) == EXIT_SUCCESS ? "ok" : "failed");
     printf("Length after read: %llu\n", test->size);
 
     for (int i = 0; i < test->size; i++) {
         printf("%d\n", test->data_p[i]);
     }
+
+    digest(test);
 
     return EXIT_SUCCESS;
 }

@@ -27,6 +27,13 @@ MD5 *initMD5(void);
  * @param message The string input.
  * @return int - EXIT_SUCCESS if read successfully, EXIT_FAILURE otherwise.
  */
-int getMessage(MD5 *md5, uint8_t *message);
+int attachMessageMD5(MD5 *md5, uint8_t *message);
+
+/**
+ * @brief Digests the message into MD5 hash.
+ * 
+ * @param md5 The md5 object pointer to digest.
+ */
+void digest(MD5 *md5);
 
 #endif  // MD5_H
