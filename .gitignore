@@ -55,6 +55,13 @@ dkms.conf
 *.cbp
 *.depend
 *.layout
+doxygen
 
 # VSCode file
-/.vscode
+.vscode/
+
+# CMake and Makefile
+build/
+CMakeFiles/
+CMakeCache.*
+CMakeLists.*
